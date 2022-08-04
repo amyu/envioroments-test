@@ -10,6 +10,7 @@ jobs:
     environment:
       name: deploy
     steps:
+      - uses: actions/checkout@v3
       - name: Hello
         run: echo ${{ secrets.SECRET_TEST }}
       - run: ./gradlew assembleDebug
